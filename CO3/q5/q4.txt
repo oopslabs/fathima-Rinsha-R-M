@@ -1,0 +1,51 @@
+package product;
+
+import java.util.Scanner;
+
+interface sports
+{
+	void spmark();
+}
+class student1
+{
+	int score1;
+	student1()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter academic score");
+		score1=sc.nextInt();
+	}
+}
+class result extends student1 implements sports
+{
+	int result,score2;
+	result()
+	{
+		super();
+	}
+	@Override
+	public void spmark() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter sports score");
+		score2=sc.nextInt();
+	}
+	void display()
+	{
+		System.out.println("Academic mark is "+score1);
+		System.out.println("Sports mark is "+score2);
+		System.out.println("Total mark is "+(score2+acscore2));
+	}
+}
+public class df_co3 
+{
+	public static void main(String args[])
+	{
+	sports sp;
+	result r=new result();
+	sp=r;
+	sp.spmark();
+	r.display();
+	
+	}
+}
+
