@@ -1,0 +1,79 @@
+package exam;
+import java.util.Scanner;
+interface shape{
+	Scanner sc=new Scanner (System.in);
+	void area();
+	void perimeter();
+}
+class triangle implements shape{
+	int b,h,s;
+     triangle()
+     {
+    	 
+    	 System.out.println("enter the lengt");
+    	 b=sc.nextInt();
+    	 System.out.println("enter the height");
+    	 h=sc.nextInt();
+    	 System.out.println("enter the base");
+    	 s=sc.nextInt();
+    	 
+     }
+	public void area()
+	{
+		System.out.println("area of traingle="+(0.5*(s*h)));
+	}
+	public void perimeter()
+	{
+		System.out.println("perimeter of traingle:"+(b+h+s));
+	}
+}
+class circle implements shape{
+	int r;
+	circle()
+	{
+	System.out.println("enter the radius:");
+	r=sc.nextInt();
+	}
+	public void area()
+	{
+		System.out.println("area of circle:"+(3.14*r*r));
+	}
+	public void perimeter()
+	{
+		System.out.println("perimeter of circle"+(2*3.14*r));
+	}
+}
+public class q1 {
+public static void main(String args[]){
+	int ch;
+	shape s;
+	circle c=new circle();
+	triangle t=new triangle();
+	Scanner sc=new Scanner(System.in);
+	System.out.println("1:area of circle\n2:perimeter of circle\n3:area of traingle\n4:perimeter of traingle\n5:exit\n");
+	
+	do{
+		System.out.println("enter you choice:");
+		ch=sc.nextInt();
+		
+	switch(ch){
+	case 1:
+		   s=c;
+	       s.area();
+	       break;
+	case 2:s=c;
+	       s.perimeter();
+	       break;
+	case 3:s=t;
+	       s.area();
+	       break;
+	case  4:s=t;
+	      s.perimeter();
+	      break;
+	
+	}
+	
+		
+	}while(ch!=5);
+}
+}

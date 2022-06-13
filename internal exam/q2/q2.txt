@@ -1,0 +1,25 @@
+package exam;
+import java.util.*;
+public class q2 {
+	public static void main(String args[]){
+    ArrayList<String> obj=new ArrayList<>();
+obj.add("banana");
+obj.add("apple");
+obj.add("pineapple");
+obj.add("avocado");
+System.out.println(obj);
+obj.add(1,"orange");
+System.out.println(obj);
+System.out.println("apple is contained:"+obj.contains("apple"));
+obj.add("mango");
+System.out.println("append:"+obj);
+String s;
+System.out.println("enter the letter");
+Scanner sc=new Scanner(System.in);
+s=sc.nextLine();
+for(String i:obj)
+if(i.charAt(0)==s.charAt(0))
+{
+	System.out.println(i);
+}
+}}
